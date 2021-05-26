@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+actor "Customer" as c
+actor "Service" as s
+rectangle Shop {
+  usecase "Displaying all customers" as UC1
+  usecase "Displaying one customer" as UC2
+  usecase "Displaying the caption" as UC3
+}
+c --> UC1
+c --> UC2
+c --> UC3
+UC1 <-- s
+UC2 <-- s
+UC3 <-- s
+@enduml

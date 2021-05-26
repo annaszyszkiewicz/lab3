@@ -1,0 +1,4 @@
+# zawartość requirements.txt
+sphinx # podstawowy pakiet do budowania dokumentacji
+sphinx_rtd_theme # szablon html
+sphinxcontrib-plantuml

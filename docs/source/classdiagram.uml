@@ -1,0 +1,29 @@
+@startuml
+
+class Customer{
+	-Long id
+	-String firstName
+	-String lastName
+
+	+String toString()
+	+Long getId()
+	+String getFirstName()
+	+String getLastName()
+}
+
+class CustomerController{
+	-CustomerRepository customerRepository
+
+	+Iterable<Customer> getCustomers()
+	+Customer getUserById(Long customerId)
+}
+
+interface CustomerRepository{
+	List<Customer> findByLastName(String lastName)
+	Customer findById(long id)
+}
+
+CustomerController *-- CustomerRepository
+Customer --> CustomerRepository
+
+@enduml
